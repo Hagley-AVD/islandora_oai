@@ -55,6 +55,8 @@ function islandora_oai_install() {
     ))
     ->execute();
 
+  db_insert('islandora_oai_metadata_formats')
+    ->fields(array(
       'name' => 'qdc',
       'metadata_prefix' => 'oai_qdc',
       'oai2_schema' => 'http://dublincore.org/schemas/xmls/qdc/2008/02/11/qualifieddc.xsd',
